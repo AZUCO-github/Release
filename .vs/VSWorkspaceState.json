@@ -1,4 +1,16 @@
 {
-  "ExpandedNodes": [],
+  "ExpandedNodes": [
+    "",
+    "\\A-SATURN",
+    "\\A-SATURN\\ARM64",
+    "\\A-SATURN\\ARM64\\Debug",
+    "\\A-SATURN\\ARM64\\Release",
+    "\\A-SATURN\\Win32",
+    "\\A-SATURN\\Win32\\Debug",
+    "\\A-SATURN\\x64",
+    "\\A-SATURN\\x64\\Debug",
+    "\\A-SATURN\\x64\\Release"
+  ],
+  "SelectedNode": "\\A-SATURN\\Win32\\Release",
   "PreviewInSolutionExplorer": false
 }
