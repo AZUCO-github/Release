@@ -9,4 +9,4 @@
 - AZUCO's web site binaries
 
 https://azuco.sakura.ne.jp/ で公開しているバイナリを置いている。
-
+https://azuco.sakura.ne.jp/fao/ Project-faoのページデータ、バイナリも置いている。
