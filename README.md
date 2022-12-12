@@ -5,6 +5,7 @@
 - APS1
 
 プライベートプロジェクトでソース公開する予定が無いものについて、バイナリのみ公開するために置いている。
+※ Windows Kit / ARM32 /dinput8.lib のサポートが無くなったため、ARM32については更新無くなります。
 
 - AZUCO's web site binaries
 
