@@ -24,6 +24,8 @@ sudo fallocate -l 16G /swapfile2
 sudo chmod 600 /swapfile2
 sudo mkswap /swapfile2
 sudo swapon /swapfile2
+
+swapon -s
 ```
 
 １を行う前に足りないものがあるので、以下のコマンドを実行する。  
