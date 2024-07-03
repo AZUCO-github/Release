@@ -13,6 +13,12 @@ android x86からのブランチであるceladonのコンパイル～実行に�
 
 
 
+- EMScripten
+
+Windows環境でEMScripten開発環境インストール～実行するメモなど。  
+
+
+
 - AZUCO's web site binaries
 
 https://azuco.sakura.ne.jp/ で公開しているバイナリを置いている。  
