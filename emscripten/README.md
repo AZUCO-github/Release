@@ -61,10 +61,12 @@ freenginx/conf/nginx.conf の server{} のあたりに次のように記述を�
       autoindex on;
       ... 以下、元の記述 ...
 ```
-freenginxの再起動は以下で行う。
+freenginxの再起動は以下で行う（要：管理者権限）
 ```
 nginx -s reload
 ```
+freenginx/html/index.html を_index.htmlといったリネームなりで殺しておかないと、index of表示はされないので注意。  
+
 
 
 
