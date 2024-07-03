@@ -24,47 +24,34 @@ Windowsだとデフォルトではpythonは入ってないが
 >emsdk activate latest
 >emsdk update
 ```
-
 Updating the SDKのemsdk update部分で  
 SSL: CERTIFICATE_VERIFY_FAILEDで失敗する場合、  
 （参考： https://www.webcyou.com/?p=10401 ）  
-
 ```
 >pip install --upgrade certifi
 >python
 >>> import certifi
->>> certifi.where()
+>>> certifi.where()　ここでcertifi/cacert.pem のパスが表示される（ただしバックスラッシュは二重表示）
+>>> quit()
 ```
-
-ここでcertifi/cacert.pem のパスが表示される（ただしバックスラッシュは二重表示）  
-
-```
->>>quit()
-```
-
 一旦コマンドラインに戻り、環境変数を設定する  
 ```
 set SSL_CERT_FILE=表示されたcertifi/cacert.pemのパス（バックスラッシュ一重表記）
-
 >emsdk update
 ```
-以上でインストール終わり
+以上でインストール終わり  
 
 
 
 
 
-★課題
-マルチスレッド
-SDL描画
-リアルタイムフレーム管理（タイマ？）
-ファイル（リソース）読み込み
-パッド入力
-サウンド
-
-
-
-
+## 課題
+マルチスレッド  
+SDL描画  
+リアルタイムフレーム管理（タイマ？）  
+ファイル（リソース）読み込み  
+パッド入力  
+サウンド  
 
 
 
