@@ -43,15 +43,28 @@ emsdkインストールフォルダにて
 ```
 >emsdk_env.bat
 ```
-を実行すると、環境変数などが設定される  
+を実行すると、環境変数などが設定される。  
 
 ## ローカルwebサーバのインストール
 Freenginx( https://freenginx.org/en/ )  
 ダウンロードページ( https://freenginx.org/en/download.html )  
-Windows版をダウンロード、解凍して、適当な場所に置く  
+Windows版をダウンロード、解凍して、適当な場所に置く。  
 freenginx/nginx.exeを起動すると  
 freenginx/html/ の中を  
-http://localhost/ として見る事が出来るようになる  
+http://localhost/ として見る事が出来るようになる。  
+  
+フルパス指定するのが面倒な場合は、index ofを表示させる。  
+(参考： https://qiita.com/onokatio/items/4669b37644fe07d3aa80 )  
+freenginx/conf/nginx.conf の server{} のあたりに次のように記述を追加。  
+```
+   server {
+      autoindex on;
+      ... 以下、元の記述 ...
+```
+freenginxの再起動は以下で行う。
+```
+nginx -s reload
+```
 
 
 
