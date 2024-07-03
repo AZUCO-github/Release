@@ -6,7 +6,6 @@
 https://emscripten.org/  
 
 ## Windows環境でのインストール手順の注釈
-
 公式のダウンロード＆インストールガイド  
 https://emscripten.org/docs/getting_started/downloads.html  
   
@@ -15,7 +14,6 @@ https://github.com/emscripten-core/emsdk
 githubの <>code のプルダウンメニューから Download.zipでダウンロードして、フォルダに解凍。後は手順通りにインストール。  
   
 Windowsだとデフォルトではpythonは入ってないが、コマンドラインでpythonと打てば、microsoft storeのpythonまでガイドされ、インストール出来る。  
-
 ```
 >emsdk.bat update
 ```
@@ -46,6 +44,14 @@ emsdkインストールフォルダにて
 >emsdk_env.bat
 ```
 を実行すると、環境変数などが設定される  
+
+## ローカルwebサーバのインストール
+Freenginx( https://freenginx.org/en/ )  
+ダウンロードページ( https://freenginx.org/en/download.html )  
+Windows版をダウンロード、解凍して、適当な場所に置く  
+freenginx/nginx.exeを起動すると  
+freenginx/html/ の中を  
+http://localhost/ として見る事が出来るようになる  
 
 
 
