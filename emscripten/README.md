@@ -67,6 +67,9 @@ nginx -s reload
 ```
 freenginx/html/index.html を_index.htmlといったリネームなりで殺しておかないと、index of表示はされないので注意。  
 
+## EMScriptenでのmake
+（参考： https://nanka.hateblo.jp/entry/2017/04/11/220554 ）
+emmakeでmake出来る。  
 
 
 
@@ -79,6 +82,5 @@ SDL描画
 サウンド  
 https://qiita.com/ytanto/items/258d567314cb4ad07457  
 https://www.slideshare.net/slideshow/cmu29/49627641  
-
 
 
