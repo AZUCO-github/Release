@@ -65,10 +65,10 @@ freenginx/conf/nginx.conf の server{} のあたりに次のように記述を�
 freenginx/html/index.html を_index.htmlといったリネームなりで殺しておかないと、index of表示はされないので注意。  
   
 作業しているフォルダのキャッシュを殺しておく  
+（ただしこれでもブラウザ側で勝手にキャッシュする）  
 ```
     location / {
         ... 元の記述 ...
-		# disable cache folder unit
 		proxy_no_cache 1;
 		proxy_cache_bypass 1; 
     }
@@ -77,17 +77,18 @@ freenginxの再起動は以下で行う（要：管理者権限）
 ```
 nginx -s reload
 ```
+## SDL
+SDLはSDL2ではなく、SDL1なので注意  
+  
+パッド入力  
+ブラウザ側の制約で自己証明書ではないhttpsサーバが必要  
+
 
 
 
 
 ## 課題
-マルチスレッド  
-SDL描画  
-リアルタイムフレーム管理（タイマ？）  
 ファイル（リソース）読み込み  
-パッド入力  
 サウンド  
-https://qiita.com/ytanto/items/258d567314cb4ad07457  
-https://www.slideshare.net/slideshow/cmu29/49627641  
+
 
