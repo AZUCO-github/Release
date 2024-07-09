@@ -31,6 +31,7 @@ Updating the SDKのemsdk update部分で SSL: CERTIFICATE_VERIFY_FAILED で失�
 ```
 set SSL_CERT_FILE=表示されたcertifi/cacert.pemのパス（バックスラッシュ一重表記）
 ```
+(どちらかと言えば、Windowsのシステムから恒久的に環境変数として登録した方が良さそう)  
 ***
 ```
 >emsdk.bat install latest
@@ -78,8 +79,16 @@ freenginxの再起動は以下で行う（要：管理者権限）
 nginx -s reload
 ```
 ## SDL
-SDLはSDL2ではなく、SDL1なので注意  
-  
+基本的にSDL2を使用する事になると思うが、使用する場合  
+```
+emcc --show-ports
+```
+にて、使用できるportを確認して、必要なほど、以下のように追加する。  
+```
+emcc -o main.html main.cpp aaa.cpp bbb.cpp --use-port=sdl2 --use-port=sdl2_gfx --use-port=sdl2_ttf  
+```
+（これらのportを使う時にアップデートがかかるので、上記のSSL関連の作業が必須となる）  
+
 パッド入力  
 ブラウザ側の制約で自己証明書ではないhttpsサーバが必要  
 
