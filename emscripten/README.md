@@ -57,9 +57,19 @@ http://localhost/ として見る事が出来るようになる。
 (参考： https://qiita.com/onokatio/items/4669b37644fe07d3aa80 )  
 freenginx/conf/nginx.conf の server{} のあたりに次のように記述を追加。  
 ```
-   server {
-      autoindex on;
-      ... 以下、元の記述 ...
+    server {
+        autoindex on;
+        ... 元の記述 ...
+    }
+```
+作業しているフォルダのキャッシュを殺しておく  
+```
+    location / {
+        ... 元の記述 ...
+		# disable cache folder unit
+		proxy_no_cache 1;
+		proxy_cache_bypass 1; 
+    }
 ```
 freenginxの再起動は以下で行う（要：管理者権限）
 ```
