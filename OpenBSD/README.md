@@ -120,11 +120,43 @@ viで編集した内容を保存して抜ける時は、[esc]キーを押して�
 ```
 exit
 ```
+### unzipのインストール
+```
+doas pkg_add unzip
+```
+（userのパスワードを訊かれるので入れる）  
+「choose package for unzip」は、とりあえず1を選択。  
 ### ブラウザのchromiumのインストール
 ```
 doas pkg_add chromium
 ```
 （userのパスワードを訊かれるので入れる）  
+### ブラウザのchromiumの起動
+```
+chrome
+```
+（chromium & ではないので注意）  
+### 日本語フォント IPAフォントのインストール
+起動したchromeで以下にアクセス  
+https://moji.or.jp/ipafont/ipa00303/  
+下の方の「IPAfont?????.zip」をダウンロードする。  
+（?????は最新のバージョンに合わせて読み替え）  
+ダウンロードが終わったらフォントをインストールする。  
+```
+unzip -x ~/Downloads/IPAfont?????.zip
+mkdir ~/.fonts
+mv IPAfont?????/* ~/.fonts/
+(cd ~/.fonts; mkfontdir; mkfontscale)
+rm -rf IPAfont?????
+```
+### ファイルマネージャのThunarのインストール
+```
+doas pkg_add thunar
+```
+
+
+
+
 
 
 
