@@ -149,24 +149,14 @@ mv IPAfont?????/* ~/.fonts/
 (cd ~/.fonts; mkfontdir; mkfontscale)
 rm -rf IPAfont?????
 ```
-### ファイルマネージャのThunarのインストール
+### ファイルマネージャのThunarのインストール & 起動
 ```
 doas pkg_add thunar
+thunar &
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+現時点では以上(´・ω・`)  
