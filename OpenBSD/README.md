@@ -33,15 +33,19 @@ VMwareで仮想マシンをセットアップする。
 「IPv4 address for ...」は、デフォルトで良いのでそのままenter。  
 「IPv6 address for ...」は、最近はデフォルトっぽいので、autoconfを入力  
 「network interface to configure ?」は、デフォルトで良いのでそのままenter。  
+  
 「password for root account ?」は、administoratorとなるユーザrootのパスワードなので、適当に決めてメモしておく。  
 （パスワードは確認のために2回訊かれる）  
 「start sshd by default ?」は、、デフォルトで良いのでそのままenter。  
 「do you expect to run the x window system ?」は、とりあえず使ってみる勢には必要なので、そのままenter。  
 「do you want the x window system to be started by xenodm ?」は、GUIでログインするならyを入力。  
-「setup a user ?」は、rootアカウント  
   
-
-
+「setup a user ?」は、作成するユーザIDを入力する。  
+（ユーザアカウントが無いと、この後の色々セットアップで支障が出るので）  
+「full name for user ?」は、適当に入れてenter。  
+「password for user ?」は、適当に決めてメモしておく。  
+（パスワードは確認のために2回訊かれる）  
+  
 「allow root ssh login ?」は、特に必要無ければデフォルトのnoで良いので、そのままenter。  
 「what timezone are you in ?」は、恐らくデフォルトでasia/tokyoになってると思うので、そのままenter。  
 「which disk is the root disk ?」は、恐らくディスクは一つだと思うので、そのままenter。  
@@ -84,16 +88,43 @@ d j
 （この後、再起動するので、しばらく待つ）  
   
 ## OpenBSDの色々セットアップ
-xenodmを有効にしたので、GUIログインが起動していると思うので、ログインする  
+xenodmを有効にしたので、GUIログインが起動していると思うので、  
+rootアカウントではなく、ユーザアカウントでログインする。  
+以下、いずれもコンソールでコマンドなどを入力していく。  
+
+### super userに切り替える
+```
+su -
+```
+（rootのパスワードを訊かれるので入れる）  
 
 ### pkgのアップデート
 ```
 pkg_add -u
 ```
+### doasをインストール
+```
+pkg_add doas
+```
+### /etc/doas.confを設定
+```
+vi /etc/doas.conf
+```
+viは初期状態から入ってる模様。  
+viで/etc/doas.confに書く内容。  
+```
+permit user as root
+```
+viで編集した内容を保存して抜ける時は、[esc]キーを押して、:qwを入力する。  
+### super userから抜ける（userに戻る）
+```
+exit
+```
 ### ブラウザのchromiumのインストール
 ```
-pkg_add chromium
+doas pkg_add chromium
 ```
+（userのパスワードを訊かれるので入れる）  
 
 
 
