@@ -19,6 +19,12 @@ Windows環境でEMScripten開発環境インストール～実行するメモな
 
 
 
+- OpenBSD
+
+VMwareでOpenBSDを動かしてみるメモなど。  
+
+
+
 - AZUCO's web site binaries
 
 https://azuco.sakura.ne.jp/ で公開しているバイナリを置いている。  
